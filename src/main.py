@@ -1,4 +1,4 @@
-def function(sir, character, no):
+def coprime_apparitions(sir, character, no):
     global max_len
 
     if len(sir) > max_len:
@@ -12,6 +12,10 @@ def function(sir, character, no):
     for c in sir:
         if c == character:
             apparitions += 1
+
+    if apparitions == 0:
+        raise Exception('0 apparitions')
+
     if no > apparitions:
         lower = apparitions
     else:
