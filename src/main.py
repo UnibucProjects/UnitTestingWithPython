@@ -1,5 +1,6 @@
 max_len = 50
 
+
 def coprime_apparitions(sir, character, no):
     global max_len
 
@@ -31,6 +32,5 @@ def coprime_apparitions(sir, character, no):
 
     return True
 
-#
 # if __name__ == '__main__':
 #     coprime_apparitions('This is a dummy call', 't', 2123)
