@@ -1,8 +1,10 @@
+max_len = 50
+
 def coprime_apparitions(sir, character, no):
     global max_len
 
-    if len(sir) > max_len:
-        raise Exception('String length too big')
+    if len(sir) > max_len or len(sir) == 0:
+        raise Exception('Empty string or string length too big')
     if no <= 1:
         raise Exception('Invalid number')
     if not character.islower():
@@ -29,6 +31,6 @@ def coprime_apparitions(sir, character, no):
 
     return True
 
-
-if __name__ == '__main__':
-    max_len = 50
+#
+# if __name__ == '__main__':
+#     coprime_apparitions('This is a dummy call', 't', 2123)
