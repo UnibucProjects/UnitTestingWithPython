@@ -1,5 +1,5 @@
 import unittest
-from main import coprime_apparitions
+from src.main import coprime_apparitions
 
 
 class MyTestCase(unittest.TestCase):
