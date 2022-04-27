@@ -24,6 +24,10 @@ class MyTestCase(unittest.TestCase):
             coprime_apparitions('', 'm', 2)
             self.assertEqual(context.exception.args[0], 'Empty string or string length too big')
 
+        self.assertEqual(coprime_apparitions('test', 't', 4), False)
+        self.assertEqual(coprime_apparitions('test', 't', 3), True)
+        self.assertEqual(coprime_apparitions('tmtmtmtmt', 't', 3), True)
+
     def test_branch_coverage(self):
         with self.assertRaises(Exception) as context:
             coprime_apparitions('', 'A', 2)
@@ -64,11 +68,6 @@ class MyTestCase(unittest.TestCase):
         self.assertFalse(coprime_apparitions("aab", 'a', 4))
 
         self.assertTrue(coprime_apparitions("aaaab", 'a', 3))
-
-    def test_valid_cases(self):
-        self.assertEqual(coprime_apparitions('test', 't', 4), False)
-        self.assertEqual(coprime_apparitions('test', 't', 3), True)
-        self.assertEqual(coprime_apparitions('tmtmtmtmt', 't', 3), True)
 
 
 if __name__ == '__main__':
